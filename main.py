@@ -10,7 +10,7 @@ session_name = os.getenv("SESSION_NAME", "anon")
 
 client = TelegramClient(session_name, api_id, api_hash)
 
-SOURCE_CHAT = "source_channel_or_bot_username"  # без @
+SOURCE_CHAT = ""  # без @
 DEST_CHAT = "me"  # або айді чату / username
 
 @client.on(events.NewMessage(chats=SOURCE_CHAT))
