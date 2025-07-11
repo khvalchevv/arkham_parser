@@ -14,7 +14,7 @@ SOURCE_CHAT = "ArkhamAlertBot"  # без @
 TARGET_CHAT_ID = -1002604238211  # 🔁 Група, куди шлеш
 TARGET_THREAD_ID = 820  # 🔁 Конкретна гілка в чаті
 
-@client.on(events.NewMessage(chats=SOURCE_CHAT_ID))
+@client.on(events.NewMessage(chats=SOURCE_CHAT))
 async def forward_message(event):
     try:
         print(f"🔁 Пересилаю в гілку {TARGET_THREAD_ID}")
